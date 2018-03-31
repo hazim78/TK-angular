@@ -9,14 +9,17 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CoursesListComponent implements OnInit {
   coursesObservable: Observable<any[]>;
-  constructor(private db: AngularFireDatabase) { }
+
+  constructor(
+    private db: AngularFireDatabase,
+  ) { }
 
   ngOnInit() {
-    this.coursesObservable = this.getCourses('/courses');
+    this.coursesObservable = this.Courses('/courses');
     console.log(this.coursesObservable);
   }
 
-  getCourses(listPath): Observable<any[]> {
+  Courses(listPath): Observable<any[]> {
     return this.db.list(listPath).valueChanges();
   }
 

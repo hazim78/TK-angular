@@ -8,19 +8,32 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent} from './app-navbar/app-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoursesListComponent } from './courses-list/courses-list.component';
+import { TotalListComponent } from './total-list/total-list.component';
+import { LogListComponent } from './log-list/log-list.component';
+import { FormsModule }   from '@angular/forms';
+import { RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'dashboard', component: TotalListComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavbarComponent,
-    CoursesListComponent
+    CoursesListComponent,
+    TotalListComponent,
+    LogListComponent
+
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
