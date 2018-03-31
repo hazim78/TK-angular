@@ -28,14 +28,14 @@ export class TotalListComponent implements OnInit {
     console.log("Recieved:"+this.lid);
     this.coursesObservable = this.Courses('/'+this.lid+'/total/')
       .subscribe(result =>{
-        this.totalIn = result[2],
-        this.expireSoon = result[1],
-        this.expire = result[0],
-        console.log("Total:"+result);
+        this.totalIn = result['totalIn'],
+        this.expireSoon = result['expireSoon'],
+        this.expire = result['expire'],
+        console.log(result);
       });
   }
 
   Courses(listPath): any {
-    return this.db.list(listPath).valueChanges();
+    return this.db.object(listPath).valueChanges();
   }
 }
