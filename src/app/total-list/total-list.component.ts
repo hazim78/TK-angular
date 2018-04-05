@@ -3,7 +3,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute } from '@angular/router';
 import { AlertService } from '../_services/index';
-import 'howler';
+//import 'howler';
 
 @Component({
   selector: 'total-list',
@@ -39,11 +39,11 @@ export class TotalListComponent implements OnInit {
   }
 
   beep(){
-    var sound = new Howl({
-      src: ['./test.mp3']
-    });
-
-    sound.play();
+    // var sound = new Howl({
+    //   src: ['./test.mp3']
+    // });
+    //
+    // sound.play();
   }
   Courses(listPath): any {
     return this.db.object(listPath).valueChanges();

@@ -14,7 +14,7 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes} from '@angular/router';
 import { AlertComponent } from './_directives/index';
 import { AlertService } from './_services/index';
-import 'howler';
+//import 'howler';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: TotalListComponent}
