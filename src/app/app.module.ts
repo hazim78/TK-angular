@@ -12,6 +12,9 @@ import { TotalListComponent } from './total-list/total-list.component';
 import { LogListComponent } from './log-list/log-list.component';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes} from '@angular/router';
+import { AlertComponent } from './_directives/index';
+import { AlertService } from './_services/index';
+import 'howler';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: TotalListComponent}
@@ -23,8 +26,8 @@ const appRoutes: Routes = [
     AppNavbarComponent,
     CoursesListComponent,
     TotalListComponent,
-    LogListComponent
-
+    LogListComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +36,10 @@ const appRoutes: Routes = [
     AngularFireAuthModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [AlertService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

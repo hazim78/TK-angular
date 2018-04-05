@@ -14,7 +14,9 @@ export class LogListComponent implements OnInit {
   list: Observable<any[]>;
   @Input()  lid: string;
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(
+    private db: AngularFireDatabase,
+  ) { }
 
   ngOnInit() {
     console.log("Recieved:"+this.lid);
@@ -26,8 +28,9 @@ export class LogListComponent implements OnInit {
   }
 
   lists(route): Observable<any[]>{
-    return this.db.list(route).valueChanges();
+    let updateList = this.db.list(route).valueChanges();
+    console.log("Updating");
+    return updateList;
   }
-
 
 }
