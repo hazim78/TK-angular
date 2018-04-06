@@ -23,10 +23,22 @@ export class LogListComponent implements OnInit {
     this.year='2018';
     this.month='3';
     this.day='29';
-    this.list = this.lists('/'+this.lid+'/expired/');
+    this.list = this.lists('/'+this.lid+'/expired/')
+    this.lists('/'+this.lid+'/expired/')
+      .subscribe(result =>{
+        console.log("News update");
+        this.playAudio();
+      });
     console.log("Table:"+this.list);
   }
 
+  playAudio(){
+    let audio = new Audio();
+    audio.src = "../../assets/audio/alarm3-note.mp3";
+    audio.load();
+    audio.play();
+  }
+  
   lists(route): Observable<any[]>{
     let updateList = this.db.list(route).valueChanges();
     console.log("Updating");

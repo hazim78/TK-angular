@@ -3,7 +3,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute } from '@angular/router';
 import { AlertService } from '../_services/index';
-//import 'howler';
+import { test1 } from '../../assets/javascript/demo';
 
 @Component({
   selector: 'total-list',
@@ -34,17 +34,9 @@ export class TotalListComponent implements OnInit {
         this.expireSoon = result['expireSoon'],
         this.expire = result['expire'],
         console.log(result);
-        this.success();
       });
   }
 
-  beep(){
-    // var sound = new Howl({
-    //   src: ['./test.mp3']
-    // });
-    //
-    // sound.play();
-  }
   Courses(listPath): any {
     return this.db.object(listPath).valueChanges();
   }
