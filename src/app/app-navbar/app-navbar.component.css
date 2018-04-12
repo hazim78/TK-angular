@@ -1,3 +1,7 @@
 .mainText{
   text-align: center;
+  font-weight: bold;
+}
+.head{
+  color: #ff9900;
 }

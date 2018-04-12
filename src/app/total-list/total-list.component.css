@@ -1,3 +1,7 @@
+.card-header-text{
+  color: #ffffff;
+  font-weight: bold ;
+}
 .total{
   font-size: 100pt;
   font-weight: bold ;
@@ -5,4 +9,28 @@
 .totalSub{
   font-size: 50pt;
   font-weight: bold ;
+}
+.card-header-total{
+  background-color: #006600;
+  padding: 10px;
+}
+.card-header-expire{
+  background-color: #cc0000;
+  padding: 10px;
+}
+.card-header-expireSoon{
+  background-color: #cc6600;
+  padding: 10px;
+}
+.card-body-total{
+  background-color: #33cc33;
+  padding: 50px;
+}
+.card-body-expireSoon{
+  background-color: #ff9900;
+  padding: 30px;
+}
+.card-body-expire{
+  background-color: #ff0000;
+  padding: 30px;
 }

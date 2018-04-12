@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'log-list',
   templateUrl: 'log-list.component.html',
-  styles: []
+  styleUrls: ['./log-list.component.css']
 })
 export class LogListComponent implements OnInit {
   year: string;
@@ -38,7 +38,7 @@ export class LogListComponent implements OnInit {
     audio.load();
     audio.play();
   }
-  
+
   lists(route): Observable<any[]>{
     let updateList = this.db.list(route).valueChanges();
     console.log("Updating");

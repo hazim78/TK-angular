@@ -1,0 +1,15 @@
+.card-header-news{
+  background-color: #3366ff;
+  padding: 10px;
+}
+.card-header-text{
+  color: #ffffff;
+  font-weight: bold ;
+}
+.name{
+  font-weight: bold;
+  font-size: 24pt;
+}
+.contract{
+  font-size: 18pt;
+}

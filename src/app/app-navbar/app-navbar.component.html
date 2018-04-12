@@ -25,14 +25,16 @@
    </ul>
  </div>-->
 </nav>
-<div>
-  <h1 class="mainText">TIMEKEEPER.my</h1>
-</div>
-<div class="row">
-  <div class="col-md-8">
-    <total-list *ngIf="this.lid" [lid]="this.lid"></total-list>
+<div class="container-fluid">
+  <div>
+    <h1 class="mainText">TIME<span class="head">KEEPER</span>.my</h1>
   </div>
-  <div class="col-md-4">
-    <log-list *ngIf="this.lid" [lid]="this.lid"></log-list>
+  <div class="row">
+    <div class="col-md-8">
+      <total-list *ngIf="this.lid" [lid]="this.lid"></total-list>
+    </div>
+    <div class="col-md-4">
+      <log-list *ngIf="this.lid" [lid]="this.lid"></log-list>
+    </div>
   </div>
 </div>

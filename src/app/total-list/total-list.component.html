@@ -1,10 +1,10 @@
 
 <div class="card-deck mb-3 text-center">
   <div class="card mb-4 box-shadow">
-    <div class="card-header">
-      <h1>Site:{{this.lid}} | Total In</h1>
+    <div class="card-header-total">
+      <h1 class="card-header-text">Site:{{this.lid}} | Total In</h1>
     </div>
-    <div class="card-body">
+    <div class="card-body-total">
       <span class="total">{{totalIn}}</span>
     </div>
   </div>
@@ -13,10 +13,10 @@
   <div class="col-md-6">
     <div class="card-deck mb-3 text-center">
       <div class="card mb-4 box-shadow">
-        <div class="card-header">
-          <h1>Expire Soon</h1>
+        <div class="card-header-expireSoon">
+          <h1 class="card-header-text">Expire Soon</h1>
         </div>
-        <div class="card-body">
+        <div class="card-body-expireSoon">
             <span class="totalSub">{{expireSoon}}</span>
         </div>
       </div>
@@ -25,10 +25,10 @@
   <div class="col-md-6">
     <div class="card-deck mb-3 text-center">
       <div class="card mb-4 box-shadow">
-        <div class="card-header">
-          <h1>Expired</h1>
+        <div class="card-header-expire">
+          <h1 class="card-header-text">Expired</h1>
         </div>
-        <div class="card-body">
+        <div class="card-body-expire">
             <span class="totalSub">{{expire}}</span>
         </div>
       </div>

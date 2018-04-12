@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, enableProdMode, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, enableProdMode } from '@angular/core';
 import { environment } from './../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -14,7 +14,7 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes} from '@angular/router';
 import { AlertComponent } from './_directives/index';
 import { AlertService } from './_services/index';
-import { test1 } from '../assets/javascript/demo';
+
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: TotalListComponent}
@@ -40,7 +40,6 @@ const appRoutes: Routes = [
   ],
   providers: [AlertService],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class AppModule { }

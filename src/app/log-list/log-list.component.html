@@ -1,14 +1,14 @@
 <div class="container">
   <div class="card mb-4 box-shadow">
-    <div class="card-header">
-      <h1>News</h1>
+    <div class="card-header-news">
+      <h1 class="card-header-text">News</h1>
     </div>
     <alert></alert>
     <ul class="list-group mb-3" *ngFor="let item of list | async">
       <li class="list-group-item d-flex justify-content-between lh-condensed">
         <div class="text-danger">
-          <h6 class="my-0">{{item.name}}</h6>
-          <small class="my-0">{{item.contract}}</small>
+          <h6 class="name">{{item.name}}</h6>
+          <small class="contract">{{item.contract}}</small>
         </div>
         <span class="text-danger"><img height="100px" width="100px" class="rounded-circle" src="{{item.pic}}"></span>
     </ul>
