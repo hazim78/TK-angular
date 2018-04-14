@@ -40,11 +40,8 @@ export class AppNavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  startDay(){
-    console.log("Select date:"+this.date);
-    this.year='2018';
-    this.month='3';
-    this.day='29';
+  clicked(){
+    console.log("Redirect to TimeKeeper");
   }
 
   checkIn(){

@@ -1,7 +1,11 @@
 .mainText{
   text-align: center;
   font-weight: bold;
+  color: #ffffff;
 }
 .head{
   color: #ff9900;
+}
+.back{
+  text-align: left;
 }
