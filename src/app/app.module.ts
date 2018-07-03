@@ -14,7 +14,8 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes} from '@angular/router';
 import { AlertComponent } from './_directives/index';
 import { AlertService } from './_services/index';
-
+import { SendEmailService } from './send-email.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: TotalListComponent}
@@ -37,8 +38,9 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    HttpClientModule
   ],
-  providers: [AlertService],
+  providers: [AlertService,SendEmailService,],
   bootstrap: [AppComponent],
 })
 

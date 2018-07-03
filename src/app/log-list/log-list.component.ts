@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import { SendEmailService } from '../send-email.service';
 
 @Component({
   selector: 'log-list',
@@ -16,6 +17,7 @@ export class LogListComponent implements OnInit {
 
   constructor(
     private db: AngularFireDatabase,
+    private mailService: SendEmailService
   ) { }
 
   ngOnInit() {
@@ -27,7 +29,12 @@ export class LogListComponent implements OnInit {
     this.lists('/'+this.lid+'/expired/')
       .subscribe(result =>{
         console.log("News update");
-        this.playAudio();
+        //this.playAudio();
+        this.mailService.sendMail()
+          .subscribe(res => {
+            console.log("Triggered");
+            console.log(res);
+          })
       });
     console.log("Table:"+this.list);
   }
