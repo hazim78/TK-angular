@@ -12,8 +12,11 @@ export class LogListComponent implements OnInit {
   year: string;
   month: string;
   day: string;
+  imgs: boolean = true;
   list: Observable<any[]>;
+  inc = 0;
   @Input()  lid: string;
+
 
   constructor(
     private db: AngularFireDatabase,
@@ -36,9 +39,8 @@ export class LogListComponent implements OnInit {
             console.log(res);
           })
       });
-    console.log("Table:"+this.list);
+    console.log(this.list);
   }
-
   playAudio(){
     let audio = new Audio();
     audio.src = "../../assets/audio/alarm3-note.mp3";

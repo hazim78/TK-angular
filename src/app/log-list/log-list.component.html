@@ -10,7 +10,7 @@
           <h6 class="name">{{item.name}}</h6>
           <small class="contract">{{item.contract}}</small>
         </div>
-        <span class="text-danger"><img height="100px" width="100px" class="rounded-circle" src="{{item.pic}}"></span>
+        <span class="text-danger"><img *ngIf="item.pic; else elseBlock" height="100px" width="100px" class="rounded-circle" src="{{item.pic}}"><ng-template #elseBlock><img height="100px" width="150px" class="rounded-circle" src="https://firebasestorage.googleapis.com/v0/b/tk-angular.appspot.com/o/16480.png?alt=media&token=bc3c836d-3563-48ad-8294-b9d2e93dd8c9"></ng-template></span>
     </ul>
   </div>
 </div>
