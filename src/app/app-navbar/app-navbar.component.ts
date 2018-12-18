@@ -44,7 +44,6 @@ export class AppNavbarComponent implements OnInit {
         if (this.lid) {
           this.getDashboardType('/' + this.lid + '/dashboard_type').subscribe( result => {
             this.dashboardType = result;
-            console.log(this.dashboardType);
           });
         }
 

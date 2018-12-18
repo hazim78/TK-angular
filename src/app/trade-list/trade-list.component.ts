@@ -15,7 +15,7 @@ export class TradeListComponent implements OnInit {
   tradesObservable: Observable<any>;
   tradesList: any;
   @Input() lid: string;
-  
+
   constructor(
     private db: AngularFireDatabase,
     private route: ActivatedRoute,
@@ -26,7 +26,6 @@ export class TradeListComponent implements OnInit {
     this.tradesObservable = this.trades('/' + this.lid + '/trades/')
     .subscribe(result => {
       this.tradesList = result;
-      console.log(this.tradesList);
     });
   }
 
