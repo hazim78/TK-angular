@@ -9,7 +9,8 @@
       <total-list *ngIf="this.lid" [lid]="this.lid"></total-list>
     </div>
     <div class="col-md-4">
-      <log-list *ngIf="this.lid" [lid]="this.lid"></log-list>
+      <log-list *ngIf="this.lid && (this.dashboardType == 0 || this.dashboardType == null)" [lid]="this.lid"></log-list>
+      <app-trade-list *ngIf="this.lid && (this.dashboardType == 1)" [lid]="this.lid"></app-trade-list>
     </div>
   </div>
 </div>

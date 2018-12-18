@@ -25,19 +25,31 @@ export class AppNavbarComponent implements OnInit {
   year: string;
   month: string;
   day: string;
-  lid:string;
+  lid: string;
+  dashboardType: any;
+
   constructor(
     private db: AngularFireDatabase,
     private modalService: NgbModal,
     private route: ActivatedRoute
     ) {
     console.log('Called Constructor');
+  }
+  ngOnInit() {
+
     this.route.queryParams.subscribe(params => {
         this.lid = params['lid'];
         console.log(this.lid);
+
+        if (this.lid) {
+          this.getDashboardType('/' + this.lid + '/dashboard_type').subscribe( result => {
+            this.dashboardType = result;
+            console.log(this.dashboardType);
+          });
+        }
+
     });
-  }
-  ngOnInit() {
+
   }
 
   clicked(){
@@ -80,6 +92,11 @@ export class AppNavbarComponent implements OnInit {
   getTotal(listPath): any {
     console.log("Triggered");
     return this.db.list(listPath).valueChanges();
+  }
+
+  getDashboardType(listPath): any {
+    console.log(listPath);
+    return this.db.object(listPath).valueChanges();
   }
 
   checkOut(){

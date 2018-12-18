@@ -16,6 +16,7 @@ import { AlertComponent } from './_directives/index';
 import { AlertService } from './_services/index';
 import { SendEmailService } from './send-email.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TradeListComponent } from './trade-list/trade-list.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: TotalListComponent}
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     TotalListComponent,
     LogListComponent,
     AlertComponent,
+    TradeListComponent,
   ],
   imports: [
     BrowserModule,
